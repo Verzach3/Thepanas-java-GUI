@@ -17,12 +17,10 @@ public class TLabel extends JPanel {
 
     public void setSize(Dimension size){
         this.size = size;
-
     }
 
-    public void setText(String text) {
-        this.text = text;
-        repaint();
+    public void setText(String newText) {
+        this.text = newText;
     }
 
     public String getText() {
@@ -46,6 +44,7 @@ public class TLabel extends JPanel {
         this.x = x;
         this.y = y;
     }
+
 
     TLabel(){
         this.setPreferredSize(size);
