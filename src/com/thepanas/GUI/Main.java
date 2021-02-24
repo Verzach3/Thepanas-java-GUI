@@ -11,21 +11,20 @@ public class Main extends JFrame {
         this.setLocationRelativeTo(null);
 
 
-        this.setVisible(true);
     }
 
 
     public static void main(String[] args){
-        new Main();
+        Main frame = new Main();
+        TLabel label = new TLabel();
+        label.setText("Hola mi so");
+        label.setLocation(30,30);
+        label.setFontSize(50);
 
+        frame.add(label);
+
+
+        frame.setVisible(true);
     }
 
-    @Override
-    public void paint(Graphics g) {
-        Graphics2D g2D = (Graphics2D) g;
-
-        TLabel label = new TLabel(20,20,34,"Hola mi so", (Graphics2D) g);
-
-        super.paint(g);
-    }
 }
