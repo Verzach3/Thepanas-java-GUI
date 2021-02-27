@@ -4,31 +4,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.event.MouseWheelEvent;
 
 public class Main extends JFrame{
-    static TLabel label = new TLabel();
-    Main(){
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(new Dimension(600,600));
-        this.setLocationRelativeTo(null);
 
+
+    Main(){
 
         eventosMouse();
     }
 
 
     public static void main(String[] args){
-        Main frame = new Main();
 
-        label.setText("Hola mi so");
-        label.setLocation(40,50);
-        label.setFontSize(50);
-
-        frame.add(label);
-
-        frame.setVisible(true);
     }
 
     public void eventosMouse(){
@@ -44,7 +32,7 @@ public class Main extends JFrame{
             @Override
             public void mousePressed(MouseEvent e){
                 super.mousePressed(e);
-                label.setLocation(e.getX(),e.getY());
+
 
                 //Leave here
                 repaint();
